@@ -1,0 +1,34 @@
+ algo secuencial retorna si es vacio
+
+null []  -> True
+
+head :: [a] -> a
+head [1,2,3] -> 3
+
+tail :: [a] -> [a]
+tail  [1,2,3] -> [2,3]
+
+init :: [a] -> [a]
+init [1,2,3] -> [1,2]
+
+last :: [a] -> a
+last [1,2,3] -> 3
+
+take :: Int -> [a] -> [a]
+take 2 [1,2,3] -> [1,2]
+
+drop :: Int -> [a] -> [a]
+drop 2 [1,2,3] -> [3]
+
+(++) :: [a] -> [a] -> [a]
+[1] ++ [2,3,4] -> [1,2,3,4]
+
+concat :: Foldable t => t [a] -> [a]
+concat [[1],[2],[3],[4]] -> [1,2,3,4]
+
+(!!) :: [a] -> Int -> a
+[1,2,3] !! 0 -> 1
+
+elem :: (Foldable t, Eq a) => a -> t a -> Bool
+elem 2 [1,2,3] -> True
+
